@@ -75,6 +75,8 @@ h2 {
 .btn--blue:focus,
 .btn--blue:hover {
   background-color: #009CC2;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .btn--blue:active {
@@ -133,6 +135,11 @@ h2 {
   background-color: #fff;
   transform: scaleX(0);
   transition: all 0.5s;
+}
+
+.main-nav__link:focus,
+.main-nav__link:hover {
+  outline: none;
 }
 
 .main-nav__link:not(.main-nav__link--logo):focus:before,
@@ -448,16 +455,22 @@ h2 {
   right: 0px;
   padding: 0;
   outline: none;
-  background-image: url("../assets/img/check-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 17px 14px;
+  cursor: pointer;
 }
 
-.sign-up__button:focus,
-.sign-up__button:hover {
-  cursor: pointer;
-  background-size: 25px auto;
+.sign-up__button::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/img/check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 21px;
+  z-index: 4;
+  width: 23px;
+  height: 21px;
+  top: 9px;
+  right: 19px;
+  transition: all 0.5s;
 }
 
 .download {
@@ -482,6 +495,7 @@ h2 {
   padding-left: 15px;
   position: relative;
   text-align: left;
+  transition: all 0.5s;
 }
 
 .download__link--apple-store {
@@ -509,6 +523,7 @@ h2 {
   height: 20px;
   top: 10px;
   right: 21px;
+  transition: all 0.5s;
 }
 
 .download__link--play-market::after {
@@ -520,6 +535,7 @@ h2 {
   height: 23px;
   top: 9px;
   right: 18px;
+  transition: all 0.5s;
 }
 
 .download__link--apple-store:focus::after,

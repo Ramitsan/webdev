@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -72,8 +70,7 @@ h2 {
   transition: all 0.3s;
 }
 
-.btn--blue:focus,
-.btn--blue:hover {
+.btn--blue:focus, .btn--blue:hover {
   background-color: #009CC2;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
   outline: none;
@@ -137,13 +134,11 @@ h2 {
   transition: all 0.5s;
 }
 
-.main-nav__link:focus,
-.main-nav__link:hover {
+.main-nav__link:focus, .main-nav__link:hover {
   outline: none;
 }
 
-.main-nav__link:not(.main-nav__link--logo):focus:before,
-.main-nav__link:not(.main-nav__link--logo):hover:before {
+.main-nav__link:not(.main-nav__link--logo):focus:before, .main-nav__link:not(.main-nav__link--logo):hover:before {
   transform: scaleX(1);
 }
 
@@ -213,19 +208,16 @@ h2 {
   margin-left: 30px;
 }
 
-.social-link:focus,
-.social-link:hover {
+.social-link:focus, .social-link:hover {
   transform: scale(1.5);
   outline: none;
 }
 
-.social-link:focus path,
-.social-link:hover path {
+.social-link:focus path, .social-link:hover path {
   fill: #00AFDB;
 }
 
-.social-link:focus circle,
-.social-link:hover circle {
+.social-link:focus circle, .social-link:hover circle {
   stroke: #00AFDB;
 }
 
@@ -253,8 +245,7 @@ h2 {
   margin-bottom: 9px;
 }
 
-.rappresent__title,
-.rappresent__text {
+.rappresent__title, .rappresent__text {
   text-align: left;
 }
 
@@ -320,17 +311,17 @@ h2 {
   height: 20px;
 }
 
-.slider__button--prev {
+.slider__button--left {
   left: 20px;
+  opacity: .5;
 }
 
-.slider__button--next {
+.slider__button--right {
   top: 0px;
   right: 6px;
 }
 
-.slider__button--prev::before,
-.slider__button--next::after {
+.slider__button--left::before, .slider__button--right::after {
   content: "";
   position: absolute;
   cursor: pointer;
@@ -341,33 +332,40 @@ h2 {
   top: 1px;
 }
 
-.slider__button--prev::before {
+.slider__button--left::before {
   background-image: url("../assets/img/arrow-left.png");
   left: -4px;
 }
 
-.slider__button--next::after {
+.slider__button--right::after {
   background-image: url("../assets/img/arrow-right.png");
   left: 2px;
 }
 
-.slider__button--prev:focus::before,
-.slider__button--prev:hover::before,
-.slider__button--next:focus::after,
-.slider__button--next:hover::after {
-  opacity: .5;
+.slider__items {
+  width: 910px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.slider__items {
+.slider__list {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: hidden;
+  padding-left: 0;
 }
 
 .slider__item {
+  list-style: none;
   margin-right: 30px;
+}
+
+.slider__picture {
+  width: 407px;
+  height: 244px;
 }
 
 .implement {
@@ -538,10 +536,7 @@ h2 {
   transition: all 0.5s;
 }
 
-.download__link--apple-store:focus::after,
-.download__link--apple-store:hover::after,
-.download__link--play-market:focus::after,
-.download__link--play-market:hover::after {
+.download__link--apple-store:focus::after, .download__link--apple-store:hover::after, .download__link--play-market:focus::after, .download__link--play-market:hover::after {
   transform: scale(1.3);
 }
 

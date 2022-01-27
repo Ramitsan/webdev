@@ -12,7 +12,7 @@
     quantitySlides = document.querySelector('.slider__quantity-slides');
 
   const maxValueCounter = sliderItems.length;
-  const gap = 437; // ширина превью + отступ справа 
+  const gap = 437; // ширина одного слайда + отступ справа 
 
   let width = carousel.offsetWidth;
   let currentSlider = 1;
